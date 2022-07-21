@@ -1,0 +1,77 @@
+@use '../../../variables.scss' as *;
+
+.modal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    height: fit-content;
+    border-radius: 25px;
+    background-color: $orange;
+    transform: translate(-50%, -50%);
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+    transition: ease-in 0.2s;
+}
+
+.modal-bg__orange{
+    background-color: $orange;
+}
+
+.modal-bg__green{
+    background-color: $green;
+}
+
+.modal-bg__blue{
+    background-color: $blue;
+}
+
+.modal-bg__red{
+    background-color: $red;
+}
+
+.close-modal__button{
+    margin-bottom: 2vh;
+    width: 95%;
+    justify-content: flex-end;
+    display: flex;
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-family: $main-font;
+        background-color: transparent;
+        color: white;
+        border: none;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        transition: ease-in 0.2s;
+        img{
+            width: 16px;
+            height: 16px;
+        }
+    }
+    button:hover{
+        border: 2px solid $white;
+    }
+}
+
+.modal-content{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (min-width: 600px) {
+    .modal{
+        max-width: 500px;
+    }
+}
+
+
+@media only screen and (min-width: 800px) {
+    .modal{
+        max-width: 500px;
+    }
+}

@@ -1,0 +1,81 @@
+@use '../../../variables.scss' as *;
+
+.orange-note{
+    background-color: $orange;
+}
+.orange-note:hover{
+    background-color: $orange-dark;
+    box-shadow: $orange-shadow;
+}
+.blue-note{
+    background-color: $blue;
+}
+.blue-note:hover{
+    background-color: $blue-dark;
+    box-shadow: $blue-shadow;
+}
+.green-note{
+    background-color: $green;
+}
+.green-note:hover{
+    background-color: $green-dark;
+    box-shadow: $green-shadow;
+}
+
+.red-note{
+    background-color: $red;
+}
+.red-note:hover{
+    background-color: $red-dark;
+}
+
+.note{
+  p{
+    width: 60%;
+    line-height: 31.5px;
+
+    padding: 20px;
+
+  }
+
+  font-weight: bold;
+  font-size: 23px;
+  height: 320px;
+
+  border-radius: 25px;
+  color: #F4F4F4;
+  display: flex;
+
+  transition: ease-in 0.2s;
+}
+.note:hover{
+    cursor: pointer;
+}
+
+.width-small{
+    width: 100%;
+}
+
+.width-large{
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    .width-small{
+        width: 50%;
+    }
+    
+    .width-large{
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .width-small{
+        width: 60%;
+    }
+    
+    .width-large{
+        width: 40%;
+    }
+}

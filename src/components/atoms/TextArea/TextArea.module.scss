@@ -1,0 +1,46 @@
+@use '../../../variables.scss' as *;
+
+.custom-textarea{
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none; 
+    padding-bottom: 15px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: bold;
+    font-family: $main-font;
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 5px;
+    border-radius: 10px;
+    color: white;
+    transition: ease-in 0.2s;
+}
+.custom-textarea:hover{
+    border: 2px solid white;
+}
+
+.custom-textarea::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+}
+.custom-textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+   }
+   
+   .custom-textarea::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+
+.custom-label{
+    font-size: 16px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    color: $white;
+}

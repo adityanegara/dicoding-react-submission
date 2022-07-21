@@ -1,0 +1,42 @@
+@use '../../../variables.scss' as *;
+
+.note-list{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.note-row{
+    gap: 35px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+    .note-list{
+        gap: 50px;
+    }
+    .note-row{
+        gap: 50px;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .note-list{
+        gap: 50px;
+    }
+    .note-row{
+        gap: 50px;
+    }
+}
+
+.empty-note{
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: $white;
+}

@@ -1,0 +1,45 @@
+@use '../../../variables.scss' as *;
+
+.colors-button{
+    display: flex;
+    justify-content: space-around;
+    button{
+        
+        border: 5px solid transparent;
+        border-radius: 50%;
+        transition: ease-in 0.2s;
+    }
+    button:hover{
+        border: 5px solid white;
+    }
+}
+.red-button{
+    background-color: $red;
+}
+
+.blue-button{
+    background-color: $blue;
+}
+
+.orange-button{
+    background-color: $orange;
+}
+
+.green-button{
+    background-color: $green;
+}
+
+.selected{
+    border: 5px solid white !important;
+}
+
+@media only screen and (min-width: 600px) {
+    .colors-button{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+}

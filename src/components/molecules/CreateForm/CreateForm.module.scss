@@ -1,0 +1,68 @@
+@use '../../../variables.scss' as *;
+
+.create-form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+
+.button-group{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    button{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-weight: bold;
+        color: white;
+        font-size: 15px;
+        font-family: $main-font;
+        border-radius: 10px;
+        border: 2px solid white;
+        background-color: transparent;
+        transition: ease-in 0.2s;
+    }
+    button:nth-child(1):hover{
+        background-color: white;
+    }
+    button:nth-child(2){
+   
+        border: 2px solid transparent;
+        background-color: transparent;
+    }
+    button:nth-child(2):hover{
+        border: 2px solid white;
+        background-color: transparent;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .button-group{
+        width: 93%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+        gap: 0px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+
+.create-button__orange:hover{
+    color: $orange;
+}
+
+.create-button__red:hover{
+    color: $red;
+}
+
+.create-button__blue:hover{
+    color: $blue;
+}
+
+.create-button__green:hover{
+    color: $green;
+}

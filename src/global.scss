@@ -1,0 +1,45 @@
+@use './variables.scss'as *;
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Inter:wght@400;500;700&display=swap');
+
+body{
+    background-color: black;
+    font-family: $main-font;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+ul
+{
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+a{
+    min-width: 44px;
+    min-height: 44px;
+    cursor: pointer;
+}
+
+
+button {
+    min-width: 44px;
+    min-height: 44px;
+    cursor: pointer;
+}
+
+input{
+    min-width: 44px;
+    min-height: 44px;
+    cursor: pointer;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
