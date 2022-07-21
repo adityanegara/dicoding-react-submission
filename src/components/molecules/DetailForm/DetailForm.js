@@ -7,6 +7,7 @@ import {getFontColorCreateButtonHover, getTextAreaRows} from './DetailFormLogic'
 import uiStore from '../../../store/uiStore';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 import notesStore from '../../../store/noteStore'; 
+import Checkbox from '../../atoms/Checkbox/Checkbox';
 
 const DetailForm = () =>{
     const detailModalNote = notesStore(state => state.detailModalNote);
@@ -15,6 +16,7 @@ const DetailForm = () =>{
     const deleteNote = notesStore(state => state.deleteNote);
     const [title, setTitle] = useState(detailModalNote.title);
     const [description, setDescription] = useState(detailModalNote.body);
+    const [isArchived, setIsArchived] = useState(detailModalNote.archived);
     const toggleModalOpen = uiStore(state => state.toggleModalOpen);
     const changeCreateModalBackgroundColor = uiStore(state => state.changeCreateModalBackgroundColor);
     const createModalBackgroundColor = uiStore(state => state.createModalBackgroundColor);
@@ -25,7 +27,10 @@ const DetailForm = () =>{
     const onHandleTitleChange = (newTitle) =>{
         setTitle(newTitle);
     }
-
+    
+    const onHandleArchieveCheckboxChange = (value) =>{
+        setIsArchived(value);
+    }
     const onHandleDescriptionChange = (newDescription) =>{
         setDescription(newDescription);
     }
@@ -33,6 +38,7 @@ const DetailForm = () =>{
     const onHandleResetButtonClicked = () =>{
         setTitle(detailModalNote.title);
         setDescription(detailModalNote.body);
+        setIsArchived(detailModalNote.archived);
         changeCreateModalBackgroundColor(detailModalNote.color);
     }
 
@@ -41,11 +47,11 @@ const DetailForm = () =>{
             id: detailModalNote.id,
             title: title,
             body: description,
-            color: createModalBackgroundColor
+            color: createModalBackgroundColor,
+            archived: isArchived
         })
         setCurrentModalNoteEmpty();
         toggleModalOpen();
-        
     }
 
     const onHandleDeleteButtonClicked = () =>{
@@ -60,6 +66,9 @@ const DetailForm = () =>{
               <Input value={title} onHandleChange={onHandleTitleChange} type="text" placeholder="Note Title..." charactersLimit={50}/>
               <TextArea rows={getTextAreaRows(isDesktop)} value={description} onHandleChange={onHandleDescriptionChange} placeholder="Note Description..." charactersLimit={500}/>
               <ColorButtons/>
+              <div className={styles['archieve-checkbox']}>
+                <Checkbox labelText="Archived" checked={isArchived}  onHandleChange={onHandleArchieveCheckboxChange}/>
+              </div>
               <div className={styles['button-group']}>
                     <div className={styles['right-buttons']}>
                         <button type='button' onClick={onHandleDeleteButtonClicked} className={styles['delete-button']}>Delete</button>

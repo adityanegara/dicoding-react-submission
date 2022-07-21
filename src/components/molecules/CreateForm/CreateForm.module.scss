@@ -3,8 +3,7 @@
 .create-form{
     display: flex;
     flex-direction: column;
-    gap: 25px;
-
+    gap: 10px;
 }
 
 .button-group{
@@ -66,3 +65,12 @@
 .create-button__green:hover{
     color: $green;
 }
+
+.archieve-checkbox{
+    width: 90%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+

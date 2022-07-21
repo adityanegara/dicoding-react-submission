@@ -6,18 +6,18 @@ const notesStore = create(set => ({
     detailModalNote: {},
     setCurrentModalNote:  (note) => set({detailModalNote: note}),
     setCurrentModalNoteEmpty: () => set({detailModalNote: {}}),
-    createNote: ({title, body, color}) =>{
+    createNote: ({title, body, color, archived}) =>{
         set(state => ({notes : [
             {
                 id: new Date(),
                 title,
                 body,
                 color,
+                archived : archived,
                 createdAt: showFormattedDate(new Date()),
-                archieved: false,
             },...state.notes]}))
     },
-    updateNote: ({id, title, body, color}) =>{
+    updateNote: ({id, title, body, color, archived}) =>{
         set(state => ({
             notes: state.notes.map(note => {
                 if(note.id === id){
@@ -26,6 +26,7 @@ const notesStore = create(set => ({
                         title: title,
                         body: body,
                         color: color,
+                        archived: archived,
                     }
                 }else{
                     return note;
