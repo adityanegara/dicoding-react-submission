@@ -1,0 +1,83 @@
+@use '../../../variables.scss' as *;
+
+.sort-group{
+    margin-bottom: 30px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    .search-input{
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        width: 100%;
+        input{
+            width: 100% !important;
+            all: unset;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 15px;
+            border: none;
+            border: 1px solid $white;
+            background-color: transparent;
+            color: $white;
+        }
+        button{
+   
+            font-family: $main-font;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: black;
+            border: 1px solid black;
+            background-color: $white;
+            transition: ease-in 0.2s;
+        }
+        button:hover{
+            box-shadow: rgba(255, 255, 255, 0.4) 0px 3px 20px;
+        }
+    }
+    .sort-groups__buttons{
+
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        button{
+            font-family: $main-font;
+            font-weight: bold;
+            color: white;
+            background-color: transparent;
+            border-radius: 10px;
+            width: 100%;
+            transition: ease-in 0.2s;
+            border: none;
+        }
+        button:hover{
+            background-color: white;
+            color: black;
+        }
+    }
+   
+}
+
+.selected-button{
+    background-color: white !important;
+    color: black !important;
+}
+
+@media only screen and (min-width: 600px) {
+    .sort-groups__buttons{
+        button{
+            width: 175px !important;
+        }
+    }
+}

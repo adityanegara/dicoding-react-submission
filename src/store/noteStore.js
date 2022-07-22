@@ -3,7 +3,12 @@ import { getInitialData, showFormattedDate} from "./initialData";
 
 const notesStore = create(set => ({
     notes: getInitialData(),
+    isArchived: false,
+    searchInput: '',
     detailModalNote: {},
+    setSearchInput: (search) =>{set({searchInput: search})},
+    setIsArchivedTrue : () =>   set(({isArchived: true})),
+    setIsArchivedFalse : () =>   set(({isArchived: false })),
     setCurrentModalNote:  (note) => set({detailModalNote: note}),
     setCurrentModalNoteEmpty: () => set({detailModalNote: {}}),
     createNote: ({title, body, color, archived}) =>{
